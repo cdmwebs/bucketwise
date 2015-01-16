@@ -1,0 +1,6 @@
+bundle install --path vendor
+bundle exec cap local externals:setup
+bundle exec rake db:schema:load
+bundle exec rake user:create
+bundle exec rake subscription:create USER_ID=1
+
